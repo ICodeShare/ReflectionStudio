@@ -1,0 +1,128 @@
+﻿<Fluent:RibbonWindow x:Class="ReflectionStudio.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cal="http://www.codeplex.com/CompositeWPF"
+        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+        xmlns:adock="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:local="clr-namespace:ReflectionStudio"
+        mc:Ignorable="d"
+        Title="代码自动生成器" 
+        Height="600" Width="800"
+        ResizeMode="CanResizeWithGrip"
+        Loaded="RibbonWindow_Loaded"
+        Closing="RibbonWindow_Closing"
+        Drop="RibbonWindow_Drop"
+        Icon="Images\ReflectionStudio.ico">
+    <Fluent:RibbonWindow.Resources>
+
+        <DataTemplate x:Key="largeDataItemTemplate">
+            <Border ToolTip="{Binding Name}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="{Binding Image}" Stretch="None"/>
+                    <TextBlock Text="{Binding Path=Name, Mode=OneWay}" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ColorDataItemTemplate">
+            <Border ToolTip="{Binding Name}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="{Binding Image}" Stretch="None"/>
+                    <TextBlock Text="{Binding Path=Name, Mode=OneWay}" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+    </Fluent:RibbonWindow.Resources>
+    
+    <Grid x:Name="MainGird">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Fluent:Ribbon Grid.Row="0"
+                       x:Name="MainRibbon"
+                       HorizontalAlignment="Stretch"
+                       AutomaticStateManagement="True">
+            <Fluent:Ribbon.ToolBarItems>
+                <Fluent:Button Size="Small" Icon="Images\32x32\application\help.png">
+                    <Fluent:Button.ToolTip>
+                        <Fluent:ScreenTip
+                            Title="Insert Chart"
+                            Text="Insert a chart to illustarate and compare data. &#xa;&#xa;Bar, Pie, Line, Area and Surface are same of the available types."
+                            Image="Images\32x32\application\help.png"
+                            HelpTopic="http:\\fluent.codeplex.com"
+                            DisableReason="Disable reason reason."
+                            Width="190"
+                            IsRibbonAligned ="True"/>
+                    </Fluent:Button.ToolTip>
+                </Fluent:Button>
+            </Fluent:Ribbon.ToolBarItems>
+            
+            <!--project tab-->
+            <Fluent:RibbonTabItem Header="首页">
+                <Fluent:RibbonGroupBox Header="Project" IsLauncherVisible="True" LauncherCommand="Open">
+                    <Fluent:Button Name="btnNewProject" Header="New"
+                                   Icon="Images\16x16\new_project.png"
+                                   LargeIcon="Images\32x32\new_project.png" />
+                    <Fluent:Button Name="btnOpenProject" Header="Open"
+                                   Icon="Images\16x16\folders\open_folder.png"
+                                   LargeIcon="Images\32x32\folders\open_folder.png" />
+                    <Fluent:Button Name="btnSaveproject" Header="Save"
+                                   Icon="Images\16x16\application\save.png"
+                                   LargeIcon="Images\32x32\application\save.png" />
+                    <Fluent:Button Name="btnSaveAsProject" Header="Save as"
+                                   Icon="Images\16x16\application\save_as.png"
+                                   LargeIcon="Images\32x32\application\save_as.png" />
+                    <Fluent:Button Name="btnCloseProject" Header="Close"
+                                   Icon="Images\16x16\folders\close_folder.png"
+                                   LargeIcon="Images\32x32\folders\close_folder.png" />
+                </Fluent:RibbonGroupBox>
+
+                <Fluent:RibbonGroupBox Header="Assemblies" >
+                </Fluent:RibbonGroupBox>
+
+                <Fluent:RibbonGroupBox Header="Snapshots" >
+                    <Fluent:ToggleButton Name="btnConnected" Header="New"
+                                        Icon="Images\32x32\connect.png"
+                                        LargeIcon="Images\32x32\connect.png" />
+                    <Fluent:ToggleButton Name="btnStartCapture" Header="Open"
+                                         Icon="mages\32x32\start_capture.png"
+                                         LargeIcon="Images\32x32\start_capture.png" />
+                    <Fluent:ToggleButton Name="btnStopCapture" Header="Save"
+                                         Icon="Images\32x32\stop_capture.png"
+                                         LargeIcon="Images\32x32\stop_capture.png" />
+                </Fluent:RibbonGroupBox>
+
+                <Fluent:RibbonGroupBox Header="Themes">
+                    <Fluent:InRibbonGallery x:Name="inRibbonGallery_Skin" 
+                                            ItemsSource ="{Binding Themes}"
+                                            ItemTemplate="{StaticResource largeDataItemTemplate}"
+                                            Fluent:KeyTip.Keys="S" GroupBy="Group" 
+                                            ResizeMode="Both" MaxItemsInRow="3" MinItemsInRow="1" ItemWidth="60" ItemHeight="55"  >
+                        <Fluent:InRibbonGallery.Filters>
+                            <Fluent:GalleryGroupFilter Title="All" Groups="Skins" />
+                        </Fluent:InRibbonGallery.Filters>
+                    </Fluent:InRibbonGallery>
+
+                    <Fluent:InRibbonGallery x:Name="inRibbonGallery_Color" 
+                                            ItemsSource ="{Binding Themes}"
+                                            ItemTemplate="{StaticResource ColorDataItemTemplate}"
+                                            GroupBy="Group" 
+                                            ResizeMode="Both" MaxItemsInRow="3" MinItemsInRow="1" ItemWidth="40" ItemHeight="55">
+                        <Fluent:InRibbonGallery.Filters>
+                            <Fluent:GalleryGroupFilter Title="All" Groups="Colors" />
+                        </Fluent:InRibbonGallery.Filters>
+                    </Fluent:InRibbonGallery>
+
+                    <Fluent:Button Header="Test Controls" Icon="Resources\Images\32x32\reflection_studio.png"
+                                   LargeIcon="Images\32x32\reflection_studio.png" Name="TestControlsButton" />
+
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+    </Grid>
+</Fluent:RibbonWindow>
