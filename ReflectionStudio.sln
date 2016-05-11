@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localizatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionStudio.Modules.LoginModule", "ReflectionStudio.Modules.LoginModule\ReflectionStudio.Modules.LoginModule.csproj", "{2D260CCA-E452-4E99-90CE-9C1CBBEC09B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionStudio.Modules.NavigationModule", "ReflectionStudio.Modules.NavigationModule\ReflectionStudio.Modules.NavigationModule.csproj", "{62898F6A-A098-45A8-B6F7-FA8C125A51D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -761,6 +763,54 @@ Global
 		{2D260CCA-E452-4E99-90CE-9C1CBBEC09B5}.WPF|Net40.Build.0 = Release|Any CPU
 		{2D260CCA-E452-4E99-90CE-9C1CBBEC09B5}.WPF|WithNRefactory.ActiveCfg = Release|Any CPU
 		{2D260CCA-E452-4E99-90CE-9C1CBBEC09B5}.WPF|WithNRefactory.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Net35.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Net35.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Net40.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|Net40.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|WithNRefactory.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Debug|WithNRefactory.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Net35.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Net35.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Net40.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|Net40.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|WithNRefactory.ActiveCfg = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Debug|WithNRefactory.Build.0 = Debug|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Net35.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Net35.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Net40.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|Net40.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|WithNRefactory.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.net_4_5_Release|WithNRefactory.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Net35.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Net35.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Net40.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|Net40.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|WithNRefactory.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Release|WithNRefactory.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Any CPU.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Any CPU.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Net35.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Net35.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Net40.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|Net40.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|WithNRefactory.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.Silverlight|WithNRefactory.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Any CPU.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Any CPU.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Net35.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Net35.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Net40.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|Net40.Build.0 = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|WithNRefactory.ActiveCfg = Release|Any CPU
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0}.WPF|WithNRefactory.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -788,5 +838,6 @@ Global
 		{609B2B1F-2817-4898-BEF2-500BA739CE20} = {F3D96ECC-B256-41FC-B791-B4F12D15788D}
 		{0B6B01BE-7ED5-483C-AB2F-2D78AB325C5E} = {F3D96ECC-B256-41FC-B791-B4F12D15788D}
 		{2D260CCA-E452-4E99-90CE-9C1CBBEC09B5} = {6410A114-190E-4C0A-80ED-8F797DCFFC5D}
+		{62898F6A-A098-45A8-B6F7-FA8C125A51D0} = {6410A114-190E-4C0A-80ED-8F797DCFFC5D}
 	EndGlobalSection
 EndGlobal
