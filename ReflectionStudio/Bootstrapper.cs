@@ -12,6 +12,9 @@ using ReflectionStudio.Common;
 
 namespace ReflectionStudio
 {
+    /// <summary>
+    /// 初始化
+    /// </summary>
     public class Bootstrapper : MefBootstrapper
     {
         public static readonly Mutex Mutex = new Mutex(true, "{D22EEFB1-DA69-40E7-BCCF-12C1C769A60B}");
